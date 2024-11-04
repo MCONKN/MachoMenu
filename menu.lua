@@ -16,11 +16,11 @@ local EachSectionWidth = (SectionChildWidth - (SectionsPadding * (SectionsCount 
 local SectionOneStart = vec2(TabsBarWidth + (SectionsPadding * 1) + (EachSectionWidth * 0), SectionsPadding + MachoPaneGap)
 local SectionOneEnd = vec2(SectionOneStart.x + EachSectionWidth, MenuSize.y - SectionsPadding)
 
-local SectionTwoStart = vec2(TabsBarWidth + (SectionsPadding * 2) + (EachSectionWidth * 1), SectionsPadding + MachoPaneGap)
-local SectionTwoEnd = vec2(SectionTwoStart.x + EachSectionWidth, MenuSize.y - SectionsPadding)
-
-local SectionThreeStart = vec2(TabsBarWidth + (SectionsPadding * 3) + (EachSectionWidth * 2), SectionsPadding + MachoPaneGap)
-local SectionThreeEnd = vec2(SectionThreeStart.x + EachSectionWidth, MenuSize.y - SectionsPadding)
+--local SectionTwoStart = vec2(TabsBarWidth + (SectionsPadding * 2) + (EachSectionWidth * 1), SectionsPadding + MachoPaneGap)
+--local SectionTwoEnd = vec2(SectionTwoStart.x + EachSectionWidth, MenuSize.y - SectionsPadding)
+--
+--local SectionThreeStart = vec2(TabsBarWidth + (SectionsPadding * 3) + (EachSectionWidth * 2), SectionsPadding + MachoPaneGap)
+--local SectionThreeEnd = vec2(SectionThreeStart.x + EachSectionWidth, MenuSize.y - SectionsPadding)
 
 -- Create our window, MenuStartCoords is where the menu starts
 MenuWindow = MachoMenuWindow(MenuStartCoords.x, MenuStartCoords.y, MenuSize.x, MenuSize.y)
@@ -36,6 +36,7 @@ MachoMenuButton(FirstSection, "Close", function()
 end)
 
 -- Second tab
+--[[
 SecondSection = MachoMenuGroup(MenuWindow, "Section Two", SectionTwoStart.x, SectionTwoStart.y, SectionTwoEnd.x, SectionTwoEnd.y)
 
 MenuSliderHandle = MachoMenuSlider(SecondSection, "Slider", 10, 0, 100, "%", 0, function(Value)
@@ -56,9 +57,11 @@ TextHandle = MachoMenuText(SecondSection, "SomeText")
 MachoMenuButton(SecondSection, "Change Text Example", function()
     MachoMenuSetText(TextHandle, "ChangedText")
 end)
+]]
 
 
 -- Third tab
+--[[
 ThirdSection = MachoMenuGroup(MenuWindow, "Section Three", SectionThreeStart.x, SectionThreeStart.y, SectionThreeEnd.x, SectionThreeEnd.y)
 
 InputBoxHandle = MachoMenuInputbox(ThirdSection, "Input", "...")
@@ -75,3 +78,8 @@ DropDownHandle = MachoMenuDropDown(ThirdSection, "Drop Down",
         "Selectable 2",
         "Selectable 3"
 )
+]]
+
+
+--local Payload = MachoWebRequest("https://github.com/MCONKN/MachoMenu/blob/main/menu.lua")
+--MachoIsolatedInject(Payload)
