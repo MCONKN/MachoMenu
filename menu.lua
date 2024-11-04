@@ -29,10 +29,22 @@ MachoMenuSetAccent(MenuWindow, 137, 52, 235)
 
 
 -- First tab
+
+--local chezza_inventory = {
+--    openInventory = function()
+--        print("ASD")
+--    end
+--}
+
 FirstSection = MachoMenuGroup(MenuWindow, "Section One", SectionOneStart.x, SectionOneStart.y, SectionOneEnd.x, SectionOneEnd.y)
 
 MachoMenuButton(FirstSection, "Close", function()
     MachoMenuDestroy(MenuWindow)
+end)
+
+
+MachoMenuButton(FirstSection, "GetResourceName", function()
+    print(GetResourceName())
 end)
 
 -- Second tab
@@ -81,5 +93,5 @@ DropDownHandle = MachoMenuDropDown(ThirdSection, "Drop Down",
 ]]
 
 
---local Payload = MachoWebRequest("https://github.com/MCONKN/MachoMenu/blob/main/menu.lua")
+--local Payload = MachoWebRequest("https://raw.githubusercontent.com/MCONKN/MachoMenu/main/menu.lua")
 --MachoIsolatedInject(Payload)
