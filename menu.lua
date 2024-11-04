@@ -44,7 +44,7 @@ end)
 
 
 MachoMenuButton(FirstSection, "GetResourceName", function()
-    print(GetResourceName())
+    print(GetCurrentResourceName())
 end)
 
 -- Second tab
