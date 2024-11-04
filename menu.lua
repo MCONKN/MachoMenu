@@ -21,7 +21,7 @@ end)
 
 
 MachoMenuButton(FirstSection, "GetResourceName", function()
-    print("asdasd")
+    print('asdasd')
 end)
 
 --local Payload = MachoWebRequest("https://raw.githubusercontent.com/MCONKN/MachoMenu/main/menu.lua")
