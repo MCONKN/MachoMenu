@@ -21,8 +21,8 @@ MachoMenuSetAccent(MenuWindow, 137, 52, 235)
 
 -- First tab
 FirstSection = MachoMenuGroup(MenuWindow, "Section One", SectionOneStart.x, SectionOneStart.y, SectionOneEnd.x, SectionOneEnd.y)
-MachoMenuButton(FirstSection, "Close", function()
-    print(_G)
+MachoMenuButton(FirstSection, "Injetct in Inventory", function()
+    MachoInjectResource('hoodlife_hud', [[print(_G)]])
 end)
 
 -- Second tab
