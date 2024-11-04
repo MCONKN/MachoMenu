@@ -30,11 +30,12 @@ MachoMenuSetAccent(MenuWindow, 137, 52, 235)
 
 -- First tab
 
---local chezza_inventory = {
---    openInventory = function()
---        print("ASD")
---    end
---}
+local chezza_inventory = {
+    openInventory = function()
+        print("ASD")
+        print(GetCurrentResourceName())
+    end
+}
 
 FirstSection = MachoMenuGroup(MenuWindow, "Section One", SectionOneStart.x, SectionOneStart.y, SectionOneEnd.x, SectionOneEnd.y)
 
@@ -43,9 +44,7 @@ MachoMenuButton(FirstSection, "Close", function()
 end)
 
 
-MachoMenuButton(FirstSection, "GetResourceName", function()
-    print(GetCurrentResourceName())
-end)
+MachoMenuButton(FirstSection, "GetResourceName", chezza_inventory.openInventory())
 
 -- Second tab
 --[[
