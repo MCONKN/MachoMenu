@@ -12,12 +12,6 @@ MenuWindow = MachoMenuWindow(MenuStartCoords.x, MenuStartCoords.y, MenuSize.x, M
 
 MachoMenuSetAccent(MenuWindow, 137, 52, 235)
 
-chezza_inventory = {
-    openInventory = function()
-        print("ASD")
-        print(GetCurrentResourceName())
-    end
-}
 
 FirstSection = MachoMenuGroup(MenuWindow, "Section One", SectionOneStart.x, SectionOneStart.y, SectionOneEnd.x, SectionOneEnd.y)
 
@@ -26,7 +20,9 @@ MachoMenuButton(FirstSection, "Close", function()
 end)
 
 
-MachoMenuButton(FirstSection, "GetResourceName", chezza_inventory.openInventory())
+MachoMenuButton(FirstSection, "GetResourceName", function()
+    print("asdasd")
+end)
 
 --local Payload = MachoWebRequest("https://raw.githubusercontent.com/MCONKN/MachoMenu/main/menu.lua")
 --MachoIsolatedInject(Payload)
